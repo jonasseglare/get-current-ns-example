@@ -15,4 +15,7 @@
   (println "The ns according to *ns*:" (ns-str *ns*))
   (println "my-ns:" (ns-str my-ns))
   (println "ns-name: " (nstest/caller-ns-func))
-  (println "this-ns3: " (nstest/this-ns3)))
+  (println "this-ns3: " (nstest/this-ns3))
+
+  (assert (= (ns-str (nstest/this-ns))
+             "get-current-ns-example.main")))
