@@ -12,7 +12,8 @@
   (println "The actual ns:" (ns-str (nstest/this-ns)))
 
   (println "\n\nOther examples:")
-  (println "The ns according to *ns*:" (ns-str *ns*))
+  (println "Ns using meta: " (ns-str (nstest/this-ns-meta)))
+  (println "The ns according to *ns* (bad):" (ns-str *ns*))
   (println "my-ns:" (ns-str my-ns))
   (println "ns-name: " (nstest/caller-ns-func))
   (println "this-ns3: " (nstest/this-ns3))

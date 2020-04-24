@@ -7,7 +7,11 @@
          (-> (var ~s)
              (.ns)))))
 
-
+(defmacro this-ns-meta []
+  (let [g (gensym)]
+    `(do
+       (def ~g)
+       (:ns (meta #'~g)))))
 
 ;; Does not work
 (defmacro this-ns2 []
